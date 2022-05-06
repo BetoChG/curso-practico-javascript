@@ -1,17 +1,17 @@
-// Codigo del cuadrado
-console.group("Cuadrado");
+// Codigo del Triangulo
+console.group("Triangulo");
 
-//const ladoCuadrado = 5;
-//console.log("Los lados del cuadrado miden: " + ladoCuadrado);
+//const ladoTriangulo = 5;
+//console.log("Los lados del Triangulo miden: " + ladoTriangulo);
 
-function perimetroCuadrado(lado) {
+function perimetroTriangulo(lado) {
     return lado * 4;
 }
 
-function areaCuadrado(lado) {
+function areaTriangulo(lado) {
     return lado * lado; 
 }
-// console.log("El area del cuadrado es: " + areaCuadrado + " centimetros cuadrados");
+// console.log("El area del Triangulo es: " + areaTriangulo + " centimetros Triangulos");
 
 
 console.groupEnd();
@@ -42,7 +42,7 @@ console.group("Triangulo");
 // console.log("El perimetro del triangulo es: " + perimetroTriangulo + " cm.");
 
 // const areaTriangulo = (ladoTriangulo3 * alturaTriangulo)/2;
-// console.log("El area del triangulo es: es: " + areaTriangulo + " centimetros cuadrados");
+// console.log("El area del triangulo es: es: " + areaTriangulo + " centimetros Triangulos");
 
 // console.groupEnd();
 
@@ -82,7 +82,7 @@ function perimetroCirculo(radio) {
 
 // Area
 // const areaCirculo = (radioCirculo * radioCirculo) * PI;
-// console.log("El area del circulo es: " + areaCirculo + " cm cuadrados");
+// console.log("El area del circulo es: " + areaCirculo + " cm Triangulos");
 function areaCirculo(radio) {
     return (radio * radio) * PI;
 }
@@ -105,3 +105,33 @@ function calcularAreaCuadrado() {
     const area = areaCuadrado(value);
     alert(area);
 }
+
+// Funcion que calcule area y perimetro de triángulo isósceles. 
+// La función debe recibir, como parámetros, la longitud de los 3 lados del triángulo.
+// La función debe validar que la longitud de los 3 lados del triángulo corresponden a un triángulo isósceles.
+// La función debe retornar la altura del triángulo.
+
+
+function perimetroTriangulo() {
+    return ((lado * 2) + base);
+}
+
+function alturaTriangulo(lado, base) {
+    return Math.sqrt((lado ** 2) - (base ** 2)/4);
+}
+
+
+function calcularAlturaTriangulo() {
+    const input1 = document.getElementById("InputTriangulo1");
+    const value = input1.value; 
+    const input2 = document.getElementById("InputTriangulo2");
+    const value2 = input2.value; 
+    const altura = alturaTriangulo(value, value2);
+    if (value !== value2) {
+        return alert(altura);
+    }
+    else {
+        return alert ("No es un isósceles, amigo");
+    }
+}
+
